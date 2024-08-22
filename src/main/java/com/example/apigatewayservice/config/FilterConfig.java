@@ -1,4 +1,4 @@
-package com.example.apigatewayservice.config;
+/*package com.example.apigatewayservice.config;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -21,4 +21,4 @@ public class FilterConfig {
                         .uri("http://localhost:8082"))
                 .build();
     }
-}
+}*/
