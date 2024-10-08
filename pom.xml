@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>apigateway-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>apigateway-service</name>
-    <description>apigateway-service</description>
+    <artifactId>sj-lab-apigateway</artifactId>
+    <version>sj-lab-apigateway</version>
+    <name>sj-lab-apigateway</name>
+    <description>sj-lab-apigateway</description>
     <url/>
     <licenses>
         <license/>
@@ -68,6 +68,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>sj-lab-apigateway</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
