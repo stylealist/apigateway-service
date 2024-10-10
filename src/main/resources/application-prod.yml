@@ -18,7 +18,7 @@ spring:
         - id : mapservice-rest
           uri: lb://MAPSERVICE-REST
           predicates:
-            - Path=/api/map/**
+            - Path=/map/**
           filters:
             #              - AddRequestHeader=first-request, first-request-header2
             #              - AddResponseHeader=first-response, first-response-header2
