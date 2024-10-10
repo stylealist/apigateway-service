@@ -4,3 +4,35 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://www.sj-lab.co.kr/discovery/eureka
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - name : GlobalFilter
+          args :
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
+      routes:
+        - id : mapservice-rest
+          uri: lb://MAPSERVICE-REST
+          predicates:
+            - Path=/api/map/**
+          filters:
+            #              - AddRequestHeader=first-request, first-request-header2
+            #              - AddResponseHeader=first-response, first-response-header2
+            - name : CustomFilter
+        - id: lb://MY-SECOND-SERVICE
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/second-service/**
+          filters:
+            #              - AddRequestHeader=second-request, second-request-header2
+            #              - AddResponseHeader=second-response, second-response-header2
+            - name: CustomFilter
+            - name: LoggingFilter
+              args:
+                baseMessage: Hi, there.
+                preLogger: true
+                postLogger: true
