@@ -6,8 +6,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://www.sj-lab.co.kr/eureka
-      #defaultZone: http://localhost:8761/eureka
+      defaultZone: http://www.sj-lab.co.kr/discovery/eureka
+      #defaultZone: http://localhost:8761/discovery/eureka
 
 spring:
   application:
